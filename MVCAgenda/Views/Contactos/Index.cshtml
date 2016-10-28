@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MVCAgenda.Models.Contacto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApePaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApeMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puesto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MostrarComo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaginaWeb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionTM)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApePaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApeMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puesto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MostrarComo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaginaWeb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionTM)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

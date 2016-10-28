@@ -1,0 +1,82 @@
+﻿@model MVCAgenda.Models.Contacto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contacto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApePaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApePaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApeMaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApeMaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Puesto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Puesto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MostrarComo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MostrarComo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaginaWeb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaginaWeb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionTM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionTM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
